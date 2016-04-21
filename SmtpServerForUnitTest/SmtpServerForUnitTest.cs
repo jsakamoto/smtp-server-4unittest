@@ -29,13 +29,13 @@ namespace Toolbelt.Net.Smtp
         {
         }
 
-        public SmtpServerForUnitTest(IPAddress address, int port)
-            : base(address, port)
+        public SmtpServerForUnitTest(IPAddress address, int port, IEnumerable<NetworkCredential> credentials = null)
+            : base(address, port, credentials)
         {
         }
 
-        public SmtpServerForUnitTest(IEnumerable<IPEndPoint> endPoints)
-            : base(endPoints)
+        public SmtpServerForUnitTest(IEnumerable<IPEndPoint> endPoints, IEnumerable<NetworkCredential> credentials = null)
+            : base(endPoints, credentials)
         {
         }
 
